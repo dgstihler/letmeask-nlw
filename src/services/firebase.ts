@@ -9,11 +9,13 @@ const config = {
   databaseURL: process.env.REACT_APP_DATABASE_URL,
   projectId: process.env.REACT_APP_PROJETCT_ID,
   storageBucket: process.env.REACT_APP_STORAGE_BUCKET,
-  messagingSenderId:process.env.REACT_APP_MESSAGIN_SENDER_ID,
+  messagingSenderId: process.env.REACT_APP_MESSAGIN_SENDER_ID,
   appId: process.env.REACT_APP_APP_ID
 };
 
 firebase.initializeApp(config);
 
-export const auth = firebase.auth();
-export const dataBase = firebase.database();
+const auth = firebase.auth();
+const dataBase = firebase.database();
+
+export { firebase, auth, dataBase };
